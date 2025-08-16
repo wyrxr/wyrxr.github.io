@@ -1,0 +1,20 @@
+<!--
+Author: Nathaniel Ingle
+Date: 20-July-2025
+
+Template for the home page.
+-->
+{%  extends "base.html" %}
+
+{%  block content %}
+{% for weighin in weighin_list %}
+<div class="weighin-entry">
+    <h2><a href="{{ weighin.get_absolute_url }}">{{ weighin.date }}: {{  weighin.weight }} lbs.</a><a href="{% url 'weighin_edit' weighin.pk %}">📝</a></h2>
+</div>
+{% endfor %}
+    {% if not user.is_authenticated %}
+        <h1>Create an Account to Get Started!</h1>
+    {% elif weighin_list.count == 0 %}
+        <h1>Add a Weigh-In to Get Started!</h1>
+    {% endif %}
+{% endblock %}

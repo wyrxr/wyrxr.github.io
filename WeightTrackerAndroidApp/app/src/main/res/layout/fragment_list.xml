@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/item_list_container"
+    android:padding="30dp"
+    tools:context=".ListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/weight_list"
+        android:name="com.zybooks.thebanddatabase.ItemListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:context="com.zybooks.thebanddatabase.MainActivity"
+        tools:listitem="@layout/list_item_weigh_in" />
+    <Button
+        android:id="@+id/add_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Add Weigh In!" />
+    <Button
+        android:id="@+id/set_goal_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Set Goal Weight" />
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Log Out"/>
+
+
+</LinearLayout>

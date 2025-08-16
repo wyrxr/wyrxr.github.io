@@ -1,0 +1,14 @@
+<!--
+Author: Nathaniel Ingle
+Date: 20-July-2025
+
+Template for editing weigh ins.-->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Edit Weigh In</h1>
+<form action="" method="post">{% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Update">
+</form>
+{% endblock content %}

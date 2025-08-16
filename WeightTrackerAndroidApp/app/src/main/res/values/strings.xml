@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weight Tracker</string>
+    <string name="weigh_in_fragment">What is your current weight?</string>
+    <string name="log_in_fragment">Log In or Create Account</string>
+    <string name="list_fragment">Recorded Weights</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

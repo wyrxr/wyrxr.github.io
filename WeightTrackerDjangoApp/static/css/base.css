@@ -1,0 +1,76 @@
+:root {
+    /* Color scheme generated via coolors.co */
+    --color-bg: #0d1321;
+    --color-surface: #1d2d44;
+    --color-primary: #3e5c76;
+    --color-secondary: #748cab;
+    --color-accent: #f0ebd8;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --radius: 12px;
+}
+
+.container {
+    max-width: 72rem;      /* ~1152px */
+    margin-inline: auto;
+    padding-inline: var(--space-4);
+}
+
+section { padding-block: var(--space-8); }
+
+header {
+    padding: 16px 24px;
+    background: var(--color-bg);
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+header .nav-left { margin-right: auto; font-size: clamp(1.25rem, 2vw, 1.75rem); padding: 0; }
+header .nav-right { display: flex; gap: 16px; font-size: 1rem; padding: 0; }
+
+header a {
+    color: inherit;
+    text-decoration: none;
+    padding: 4px 6px;
+    border-radius: 8px;
+    transition: background-color .15s ease, color .15s ease;
+}
+header a:hover { color: var(--color-accent); background: color-mix(in oklab, var(--color-surface) 70%, transparent); }
+header a:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+.weighin-entry {
+    font-size: larger;
+    background-color: var(--color-primary);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.25);
+    padding: 16px;
+}
+
+/* Text & links */
+body {
+    color: var(--color-accent);
+    background-color: var(--color-surface);
+    line-height: 1.6;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 { font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem); line-height: 1.2; letter-spacing: .2px; }
+h2 { font-size: clamp(1.35rem, 2vw + .5rem, 1.75rem); line-height: 1.25; }
+p, li { max-width: 65ch; }
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color .15s ease, text-decoration-color .15s ease;
+}
+a:hover { text-decoration: underline; }
+a:visited { opacity: .9; }
+
+html { text-size-adjust: 100%; }

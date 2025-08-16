@@ -1,0 +1,53 @@
+<!--
+Author: Nathaniel Ingle
+Date: 20-July-2025
+
+Base template for website
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Weight Tracker!{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+  <header>
+    <div class="nav-left">
+      <a href="{% url 'home' %}">Weight Tracker</a>
+    </div>
+    <nav class="nav-right" aria-label="Primary">
+      <a href="{% url 'weighin_new' %}">New Weigh In!</a>
+      <a href="{% url 'weighin_graph' %}">See Your Progress!</a>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <!-- message based on whether user is logged in -->
+    {% if user.is_authenticated %}
+      <section class="card" aria-live="polite">
+        <h1>Hi, {{ user.username }}!</h1>
+        <form action="{% url 'logout' %}" method="post">
+          {% csrf_token %}
+          <button type="submit">Log Out</button>
+        </form>
+      </section>
+    {% else %}
+      <div>
+        <p>You are not logged in.</p>
+        <p>
+          <a href="{% url 'login' %}">Log In</a> |
+          <a href="{% url 'signup' %}">Sign Up</a>
+        </p>
+      </div>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+</body>
+</html>

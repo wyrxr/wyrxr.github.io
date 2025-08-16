@@ -1,0 +1,15 @@
+<!--
+Author: Nathaniel Ingle
+Date: 20-July-2025
+
+Tempalte for the individual weigh in details. -->
+{%  extends "base.html" %}
+
+{% block content %}
+<div class="weighin-entry">
+    <h2>{{  weighin.date }}</h2>
+    <p>{{ weighin.weight }}</p>
+    <p><a href="{% url 'weighin_edit' weighin.pk %}">Edit Weigh In 📝</a></p>
+    <p><a href="{% url 'weighin_delete' weighin.pk %}">Delete Weigh In ❌</a></p>
+</div>
+{% endblock content %}

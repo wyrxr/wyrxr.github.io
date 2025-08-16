@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sunshine">#f7f990</color>
+    <color name="sunrise">#e6be83</color>
+    <color name="sunset">#950C0C</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000 </color>
+    <color name="grey">#808080</color>
+</resources>
