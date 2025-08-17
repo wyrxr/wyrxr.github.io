@@ -1,3 +1,6 @@
+* TOC
+{:toc}
+
 # Professional Self-Assessment
 
 My name is Nathaniel Ingle, and this ePortfolio represents the culmination of my journey as part of the computer science program at Southern New Hampshire University. Through this program I have developed a deep understanding and appreciation for the fundamentals of computer science, including data structures, software engineering best practices, and security. Beyond these hard skills, I have also acquired a powerful repertoire of soft skills, such as teamwork and effective communication with diverse audiences. These skills will prove invaluable in any workplace setting.
