@@ -46,8 +46,3 @@ In this enhancement I learned how to make a website responsive to a user’s log
 # Conclusion
 
 The computer science program at Southern New Hampshire University has been an unforgettable experience. The skills and knowledge I have acquired during my time in this program have equipped me to further my career and education. I have the opportunity now to step into a professional position with full confidence in my strength and abilities.e artifact that I have improved in three key areas: Software Design and Engineering, Algorithms and Data Structures, and Databases. The artifact is a weight-tracking app that I built the course CS-360, Mobile Architecture and Programming. The original program was built using Android Studio and Java and designed to run on mobile devices. I have redesigned it into a server-based webpage using Django and Python. 
-
-# Code Review
-
-[![Code Review](https://img.youtube.com/vi/Q3h_uhPYSYU/maxresdefault.jpg)](https://youtu.be/Q3h_uhPYSYU)
-
