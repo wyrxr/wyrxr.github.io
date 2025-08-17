@@ -25,6 +25,10 @@ Despite the simplicity of this artifact, it demonstrates many of the core skills
 
 The application was successfully ported to Python using the Django framework. I have improved the user experience and user interface, as well as added new functionality like independent user accounts that properly partition user weights.
 
+![Adding a new weigh-in.](https://github.com/wyrxr/wyrxr.github.io/blob/main/images/new-weigh-in.png?raw=true)
+
+![Weigh-in list view homepage](https://github.com/wyrxr/wyrxr.github.io/blob/main/images/listview.png?raw=true)
+
 The primary challenges I faced while developing this enhancement related to becoming familiar with the Django framework. This involved reading books and guides related to the framework to understand it and develop software that met the requirements. I have learned how Django uses models to facilitate database operations, how its Model-View-Template pattern compares to the Model-View-Controller pattern used by Java and Android, and how Django uses URL patterns to route specific URLs to Python functions and classes. I have continued to improve my understanding and implementation of CSS and frontend development techniques to create a visually appealing and accessible website.
 
 # Enhancement Two: Algorithms and Data Structures
@@ -33,6 +37,8 @@ To demonstrate knowledge and capability in algorithms and data structures, I imp
 
 For this enhancement I intended to demonstrate mastery of analyzing and designing algorithmic solutions to problems in a way that appropriately manages trade-offs. I have successfully accomplished this goal by demonstrating the ability to accurately implement a core algorithm, and I have chosen an implementation that best addresses performance concerns. I chose a closed form (analytical) solution, which means that for any dataset, the computational load increases linearly, rather than using an iterative (numerical) solution, which could have an arbitrary execution time. Based on the speed that the current algorithm can be calculated and the expected limited dataset (any one user shouldn’t exceed several thousand weigh ins), the closed form solution seemed most appropriate.  
 
+![Weigh-in graph showing user's long-term progress](https://github.com/wyrxr/wyrxr.github.io/blob/main/images/weight-graph.png?raw=true)
+
 Implementing this algorithm allowed me to brush up on my statistical reasoning skills and my understanding of core mathematical subjects. It has also given me that chance to practice separation of concerns, as I added a separate utils.py file to contain the algorithm which can contain new features when they need to be added. Since the framework I had previously created provided a strong base for building new modules and pages, creating a new page and hooking up the needed paths required minimal effort, exemplifying the benefit of modular design. The primary challenge I faced was getting the chart to render correctly using matplotlib, as the times were based on date objects that required conversion into a numeric format to perform calculations.  
 
 # Enhancement Three: Database and Security
@@ -40,6 +46,10 @@ Implementing this algorithm allowed me to brush up on my statistical reasoning s
 The artifact utilizes databases to store user login credentials and weights. This provides the opportunity to demonstrate mastery of common database management operations and the specific software structures needed to securely serve multiple users from a shared database. In this case I created a WeighIn model with a foreign key to Django’s auth database to associate each weigh in with a specific user. For this enhancement I have implemented a login system and views which reflect the current user, as well as migrating the database from the default SQLite to a PostgreSQL database. This provides a more scalable and feature-rich database environment. While SQLite would likely serve well in this application, migrating the database shows familiarity with both systems and the ability to use Django commands like dumpdata to create database backups from which the application can be restored without data loss or corruption.  
  
 The artifact demonstrates a security mindset by developing robust authentication and authorization components for the application, ensuring that users are only presented with the data that specifically pertains to them. Further, by using Django’s powerful and secure login capabilities as the base for these changes, I have demonstrated an appropriate approach to implementing user authorization, which means relying on trusted libraries for this functionality rather than trying to reimplement it from scratch, which could pose security concerns. I’ve also implemented sensitive information such as database credentials as environmental variables to ensure that these would not appear in the codebase in plaintext.  
+
+![Sign up screen](https://github.com/wyrxr/wyrxr.github.io/blob/main/images/signup.png?raw=true)
+
+![Log in screen](https://github.com/wyrxr/wyrxr.github.io/blob/main/images/login.png?raw=true)
 
 In this enhancement I learned how to make a website responsive to a user’s login status and present data based on information associated with that user’s account. I also learned about proper database management procedures and the strengths and weaknesses of different database providers. The principal challenge during this enhancement was getting the site to properly display for users who were not logged in, which required using Django’s LoginRequiredMixin to ensure that a class-based view could only be accessed by a logged-in user. This ensures that the site does not try to render a page based on information that doesn’t exist in the database.  
 
